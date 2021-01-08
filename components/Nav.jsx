@@ -23,7 +23,9 @@ function Nav() {
         maxWidth="975px"
         m="auto"
       >
-        <Text fontWeight="700">Instagram</Text>
+        <Text fontSize="24px" fontWeight="700">
+          Instagram
+        </Text>
         <Spacer />
         <HStack>
           <IconButton
