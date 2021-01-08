@@ -28,24 +28,24 @@ function Profile() {
           src="https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/medium/oapgW_Fp_400x400.jpg"
         />
       </PopoverTrigger>
-      <PopoverContent>
+      <PopoverContent _focus={{ outline: 'none' }}>
         <PopoverArrow />
         <PopoverBody>
           <Stack>
-            <HStack>
+            <HStack cursor="pointer">
               <AccountCircleIcon />
               <Text>Profile</Text>
             </HStack>
-            <HStack>
+            <HStack cursor="pointer">
               <TurnedInNotIcon />
               <Text>Saved</Text>
             </HStack>
-            <HStack>
+            <HStack cursor="pointer">
               <SettingsIcon />
               <Text>Settings</Text>
             </HStack>
             <Divider />
-            <Text>Log out</Text>
+            <Text cursor="pointer">Log out</Text>
           </Stack>
         </PopoverBody>
       </PopoverContent>

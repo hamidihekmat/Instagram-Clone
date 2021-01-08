@@ -10,6 +10,3 @@ export default function Home() {
     </Box>
   );
 }
-
-// Todo
-// Create a default container

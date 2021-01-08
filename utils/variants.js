@@ -1,7 +1,7 @@
 export const containerWidth = {
-  base: '100%',
   sm: '100%',
-  lg: '60%',
+  md: '100%',
+  xl: '975px',
 };
 
 export const containerMaxWidth = '975px';
