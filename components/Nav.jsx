@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Box, Text, Spacer, IconButton, HStack } from '@chakra-ui/react';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
@@ -21,29 +22,37 @@ function Nav() {
         maxWidth={containerMaxWidth}
         m="auto"
       >
-        <Text fontSize="24px" fontWeight="700">
-          Instagram
-        </Text>
+        <Link href="/">
+          <Text cursor="pointer" fontSize="34px" fontFamily="Billabong">
+            Instagram
+          </Text>
+        </Link>
+
         <Spacer />
         <HStack>
-          <IconButton
-            isRound
-            aria-label="Home"
-            bg="white"
-            icon={<HomeIcon />}
-          />
+          <Link href="/">
+            <IconButton
+              isRound
+              aria-label="Home"
+              bg="white"
+              icon={<HomeIcon />}
+            />
+          </Link>
+
           <IconButton
             isRound
             aria-label="Send Message"
             bg="white"
             icon={<SendIcon />}
           />
-          <IconButton
-            isRound
-            aria-label="Explore More"
-            bg="white"
-            icon={<ExploreIcon />}
-          />
+          <Link href="/explore">
+            <IconButton
+              isRound
+              aria-label="Explore More"
+              bg="white"
+              icon={<ExploreIcon />}
+            />
+          </Link>
           <IconButton
             isRound
             aria-label="Favorites"
