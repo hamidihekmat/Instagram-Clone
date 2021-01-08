@@ -45,7 +45,7 @@ function Profile() {
               <Text>Settings</Text>
             </HStack>
             <Divider />
-            <Text>Logout</Text>
+            <Text>Log out</Text>
           </Stack>
         </PopoverBody>
       </PopoverContent>

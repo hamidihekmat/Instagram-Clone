@@ -6,7 +6,8 @@ import ExploreIcon from '@material-ui/icons/Explore';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 // Component
 import Profile from './Profile';
-
+// Variants
+import { containerWidth, containerMaxWidth } from '../utils/variants';
 function Nav() {
   return (
     <Box w="100%" borderBottom="1px" borderColor="gray.200">
@@ -16,11 +17,8 @@ function Nav() {
         display="flex"
         h="54px"
         as="nav"
-        w={{
-          sm: '100%',
-          lg: '60%',
-        }}
-        maxWidth="975px"
+        w={containerWidth}
+        maxWidth={containerMaxWidth}
         m="auto"
       >
         <Text fontSize="24px" fontWeight="700">
@@ -58,6 +56,7 @@ function Nav() {
     </Box>
   );
 }
+import { formatMs } from '@material-ui/core';
 
 // Main Box extends the whole page & has border
 // Nav Box is a flex that contains Logo and IconButtons
