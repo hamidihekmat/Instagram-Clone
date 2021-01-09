@@ -30,6 +30,7 @@ function Nav() {
 
         <Spacer />
         <HStack>
+          {/* Home */}
           <Link href="/">
             <IconButton
               isRound
@@ -38,13 +39,16 @@ function Nav() {
               icon={<HomeIcon />}
             />
           </Link>
-
-          <IconButton
-            isRound
-            aria-label="Send Message"
-            bg="white"
-            icon={<SendIcon />}
-          />
+          {/* Messages */}
+          <Link href="/messages">
+            <IconButton
+              isRound
+              aria-label="Send Message"
+              bg="white"
+              icon={<SendIcon />}
+            />
+          </Link>
+          {/* Explore */}
           <Link href="/explore">
             <IconButton
               isRound
@@ -53,6 +57,7 @@ function Nav() {
               icon={<ExploreIcon />}
             />
           </Link>
+          {/* Favorites */}
           <IconButton
             isRound
             aria-label="Favorites"
