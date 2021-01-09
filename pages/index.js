@@ -1,12 +1,13 @@
 import { Box, Text } from '@chakra-ui/react';
-import { containerMaxWidth, containerWidth } from '../utils/variants';
+// Reusable
+import { MainContainer } from '../utils/resusable';
 
 export default function Home() {
   return (
     <Box w="100%" bg="primary.bg">
-      <Box p={4} w={containerWidth} maxWidth={containerMaxWidth} m="auto">
+      <MainContainer m="auto">
         <Text>Hello World</Text>
-      </Box>
+      </MainContainer>
     </Box>
   );
 }

@@ -8,20 +8,18 @@ import ExploreIcon from '@material-ui/icons/Explore';
 
 // Component
 import ProfileMenu from './ProfileMenu';
-// Variants
-import { containerWidth, containerMaxWidth } from '../utils/variants';
 import FavoriteMenu from './FavoriteMenu';
+// Reusable Container
+import { MainContainer } from '../utils/resusable';
+
 function Nav() {
   return (
     <Box w="100%" borderBottom="1px" borderColor="gray.200">
-      <Box
-        px={4}
+      <MainContainer
         alignItems="center"
         display="flex"
         h="54px"
         as="nav"
-        w={containerWidth}
-        maxWidth={containerMaxWidth}
         m="auto"
       >
         <Link href="/">
@@ -63,7 +61,7 @@ function Nav() {
           <FavoriteMenu />
           <ProfileMenu />
         </HStack>
-      </Box>
+      </MainContainer>
     </Box>
   );
 }
