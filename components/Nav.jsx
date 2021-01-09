@@ -1,14 +1,16 @@
 import Link from 'next/link';
+// ChakraUI
 import { Box, Text, Spacer, IconButton, HStack } from '@chakra-ui/react';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 import SendIcon from '@material-ui/icons/Send';
 import ExploreIcon from '@material-ui/icons/Explore';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+
 // Component
-import Profile from './Profile';
+import ProfileMenu from './ProfileMenu';
 // Variants
 import { containerWidth, containerMaxWidth } from '../utils/variants';
+import FavoriteMenu from './FavoriteMenu';
 function Nav() {
   return (
     <Box w="100%" borderBottom="1px" borderColor="gray.200">
@@ -57,14 +59,9 @@ function Nav() {
               icon={<ExploreIcon />}
             />
           </Link>
-          {/* Favorites */}
-          <IconButton
-            isRound
-            aria-label="Favorites"
-            bg="white"
-            icon={<FavoriteBorderIcon />}
-          />
-          <Profile />
+          {/* Menus */}
+          <FavoriteMenu />
+          <ProfileMenu />
         </HStack>
       </Box>
     </Box>
