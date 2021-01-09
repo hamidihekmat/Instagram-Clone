@@ -70,7 +70,6 @@ function Nav() {
     </Box>
   );
 }
-import { formatMs } from '@material-ui/core';
 
 // Main Box extends the whole page & has border
 // Nav Box is a flex that contains Logo and IconButtons
