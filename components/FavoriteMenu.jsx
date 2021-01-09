@@ -20,6 +20,7 @@ function FavoriteMenu() {
       <MenuButton
         onClick={() => setIsOpen(!isOpen)}
         as={IconButton}
+        bg="white"
         isRound
         icon={isOpen ? <Favorite /> : <FavoriteBorderIcon />}
       />
