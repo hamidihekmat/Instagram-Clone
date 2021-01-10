@@ -13,10 +13,13 @@ export function useSlider(ref, view) {
       setShowPrev(false);
     }
   };
+
   useEffect(() => {
-    ref.current.addEventListener('scroll', print);
-    return () => ref.current.removeEventListener('scroll', print);
+    if (ref && ref.current) {
+      ref.current.addEventListener('scroll', print);
+    }
   }, [ref]);
+
   const slideRight = () => {
     const width = ref.current.offsetWidth / view;
     ref.current.scrollLeft += width;
