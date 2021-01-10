@@ -1,11 +1,8 @@
-import {
-  Box,
-  HStack,
-  Avatar,
-  IconButton,
-  useMediaQuery,
-} from '@chakra-ui/react';
 import { useRef } from 'react';
+import { Box, Stack, IconButton, useMediaQuery } from '@chakra-ui/react';
+// Components
+import Story from './Story';
+
 // Icons
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
@@ -13,7 +10,7 @@ import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
 import { useSlider } from '../hooks/useSlider';
 
 function Stories() {
-  const [isLargerThan360] = useMediaQuery('(max-width: 370px)');
+  const [isLargerThan360] = useMediaQuery('(max-width: 375px)');
   const sliderRef = useRef(null);
   const { slideLeft, slideRight } = useSlider(sliderRef);
   // Test Data
@@ -27,7 +24,7 @@ function Stories() {
       border="1px"
       borderColor="gray.200"
       display="flex"
-      justifyContent="flex-start"
+      justifyContent="center"
       alignItems="center"
       position="relative"
       w={{
@@ -40,7 +37,7 @@ function Stories() {
           position="absolute"
           isRound
           zIndex={4}
-          left={5}
+          left={3}
           size={'xsm'}
           bg="gray.200"
           _focus={{ outline: 'none' }}
@@ -49,9 +46,9 @@ function Stories() {
         />
       )}
 
-      <HStack
-        ml="16px"
+      <Stack
         overflowX="scroll"
+        direction="row"
         ref={sliderRef}
         css={{
           '&::-webkit-scrollbar ': {
@@ -64,22 +61,21 @@ function Stories() {
         }}
       >
         {stories.map((id) => (
-          <Avatar
+          <Story
             key={id}
-            cursor="pointer"
-            size="lg"
-            name="Alex Jones"
-            src="https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/medium/oapgW_Fp_400x400.jpg"
+            image="https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/medium/oapgW_Fp_400x400.jpg"
+            name="Dan Abramov
+"
           />
         ))}
-      </HStack>
+      </Stack>
       {!isLargerThan360 && (
         <IconButton
           position="absolute"
           isRound
           zIndex={4}
           size={'xsm'}
-          right={5}
+          right={3}
           bg="gray.200"
           _focus={{ outline: 'none' }}
           onClick={slideRight}
@@ -90,6 +86,8 @@ function Stories() {
   );
 }
 
+export default Stories;
 // TODO
 // ADD PREV/NEXT Buttons
-export default Stories;
+// Add functionalities
+// Loading State

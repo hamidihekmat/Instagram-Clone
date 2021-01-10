@@ -17,3 +17,5 @@ export function MainContainer(props) {
     </Box>
   );
 }
+
+// Stories Avatar

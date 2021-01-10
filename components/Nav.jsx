@@ -33,6 +33,7 @@ function Nav() {
           {/* Home */}
           <Link href="/">
             <IconButton
+              _focus={{ outline: 'none' }}
               isRound
               aria-label="Home"
               bg="white"
@@ -42,6 +43,7 @@ function Nav() {
           {/* Messages */}
           <Link href="/messages">
             <IconButton
+              _focus={{ outline: 'none' }}
               isRound
               aria-label="Send Message"
               bg="white"
@@ -51,6 +53,7 @@ function Nav() {
           {/* Explore */}
           <Link href="/explore">
             <IconButton
+              _focus={{ outline: 'none' }}
               isRound
               aria-label="Explore More"
               bg="white"
