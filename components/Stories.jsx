@@ -10,12 +10,33 @@ import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
 import { useSlider } from '../hooks/useSlider';
 
 function Stories() {
+  // Test Data (Need multiples of 5s)
+  const stories = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+  ];
   // View is the view width which the carousel will go to
-  const view = 3;
+  // 20 is length of stories we divide it by length of items in view
   const sliderRef = useRef(null);
-  const { slideLeft, slideRight, value } = useSlider(sliderRef, view);
-  // Test Data
-  const stories = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+  const { slideLeft, slideRight, showPrev } = useSlider(sliderRef, 2);
 
   return (
     <Box
@@ -33,7 +54,7 @@ function Stories() {
         sm: '100%',
       }}
     >
-      {!value == 0 && (
+      {showPrev && (
         <IconButton
           position="absolute"
           isRound
@@ -71,19 +92,17 @@ function Stories() {
         ))}
       </Stack>
 
-      {value != view && (
-        <IconButton
-          position="absolute"
-          isRound
-          zIndex={4}
-          size={'xsm'}
-          right={3}
-          bg="gray.200"
-          _focus={{ outline: 'none' }}
-          onClick={slideRight}
-          icon={<KeyboardArrowRightIcon />}
-        />
-      )}
+      <IconButton
+        position="absolute"
+        isRound
+        zIndex={4}
+        size={'xsm'}
+        right={3}
+        bg="gray.200"
+        _focus={{ outline: 'none' }}
+        onClick={slideRight}
+        icon={<KeyboardArrowRightIcon />}
+      />
     </Box>
   );
 }
