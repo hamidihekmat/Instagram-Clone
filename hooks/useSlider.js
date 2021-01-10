@@ -1,15 +1,23 @@
-// Slider Hook
+import { useState } from 'react';
 
-export function useSlider(ref) {
+// view is the width of the container which will the carousel slide to on (Next|Prev)
+export function useSlider(ref, view) {
+  const [value, setValue] = useState(false);
   const slideRight = () => {
-    const width = ref.current.offsetWidth / 2;
-    ref.current.scrollLeft += width;
+    if (value <= view) {
+      const width = ref.current.offsetWidth / view;
+      ref.current.scrollLeft += width;
+      setValue(value + 1);
+    }
   };
   const slideLeft = () => {
-    const width = ref.current.offsetWidth / 2;
-    ref.current.scrollLeft -= width;
+    if (value != 0) {
+      const width = ref.current.offsetWidth / view;
+      ref.current.scrollLeft -= width;
+      setValue(value - 1);
+    }
   };
-  return { slideLeft, slideRight };
+  return { slideLeft, slideRight, value };
 }
 
 // TODO

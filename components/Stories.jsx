@@ -10,9 +10,10 @@ import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
 import { useSlider } from '../hooks/useSlider';
 
 function Stories() {
-  const [isLargerThan360] = useMediaQuery('(max-width: 375px)');
+  // View is the view width which the carousel will go to
+  const view = 3;
   const sliderRef = useRef(null);
-  const { slideLeft, slideRight } = useSlider(sliderRef);
+  const { slideLeft, slideRight, value } = useSlider(sliderRef, view);
   // Test Data
   const stories = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
@@ -32,7 +33,7 @@ function Stories() {
         sm: '100%',
       }}
     >
-      {!isLargerThan360 && (
+      {!value == 0 && (
         <IconButton
           position="absolute"
           isRound
@@ -69,7 +70,8 @@ function Stories() {
           />
         ))}
       </Stack>
-      {!isLargerThan360 && (
+
+      {value != view && (
         <IconButton
           position="absolute"
           isRound
