@@ -5,10 +5,10 @@ export function useSlider(ref, view) {
   const [showPrev, setShowPrev] = useState(false);
   const [showNext, setShowNext] = useState(true);
   // Size in which we can use to render dotted statte
-  const size = Math.ceil(ref.current.scrollWidth / ref.current.clientWidth);
-  console.log(size);
+  // const size = Math.ceil(ref.current.scrollWidth / ref.current.clientWidth);
+  // console.log(size);
 
-  const print = (event) => {
+  const trackScroll = (event) => {
     const { scrollLeft, clientWidth, scrollWidth } = event.target;
     // Max scroll width
     const maxWidth = scrollLeft + clientWidth;
@@ -28,9 +28,15 @@ export function useSlider(ref, view) {
 
   useEffect(() => {
     if (ref && ref.current) {
-      ref.current.addEventListener('scroll', print);
+      const { scrollWidth, clientWidth } = ref.current;
+
+      if (scrollWidth === clientWidth) {
+        setShowNext(false);
+      }
+
+      ref.current.addEventListener('scroll', trackScroll);
     }
-  }, [ref]);
+  }, [ref, setShowNext]);
 
   const slideRight = () => {
     const width = ref.current.offsetWidth / view;

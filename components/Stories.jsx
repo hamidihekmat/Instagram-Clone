@@ -12,7 +12,6 @@ import { useSlider } from '../hooks/useSlider';
 function Stories() {
   // Test Data (Need multiples of 5s)
   const stories = [
-    0,
     1,
     2,
     3,
@@ -36,7 +35,7 @@ function Stories() {
   // View is the view width which the carousel will go to
   // 20 is length of stories we divide it by length of items in view
   const sliderRef = useRef(null);
-  const { slideLeft, slideRight, showPrev, showNext } = useSlider(sliderRef, 2);
+  const { slideLeft, slideRight, showPrev, showNext } = useSlider(sliderRef, 3);
 
   return (
     <Box
@@ -46,7 +45,7 @@ function Stories() {
       border="1px"
       borderColor="gray.200"
       display="flex"
-      justifyContent="center"
+      justifyContent="flex-start"
       alignItems="center"
       position="relative"
       w={{
@@ -87,6 +86,7 @@ function Stories() {
         {stories.map((id) => (
           <Story
             key={id}
+            id={id}
             image="https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/medium/oapgW_Fp_400x400.jpg"
             name="Dan Abramov
 "

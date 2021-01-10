@@ -1,9 +1,12 @@
 import { Avatar, Box, Text } from '@chakra-ui/react';
 
-function Story({ name, image }) {
+// ID is used for tabindex
+
+function Story({ name, image, id }) {
   return (
     <Box maxWidth="62px" mx="5px">
       <Avatar
+        tabIndex={id}
         mt="20px"
         cursor="pointer"
         size="lg"
