@@ -15,8 +15,10 @@ import { useSlider } from '../hooks/useSlider';
 function Stories() {
   const [isLargerThan360] = useMediaQuery('(max-width: 370px)');
   const sliderRef = useRef(null);
-  const stories = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
   const { slideLeft, slideRight } = useSlider(sliderRef);
+  // Test Data
+  const stories = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+
   return (
     <Box
       mt="16px"
@@ -39,7 +41,7 @@ function Stories() {
           isRound
           zIndex={4}
           left={5}
-          size={['xsm']}
+          size={'xsm'}
           bg="gray.200"
           _focus={{ outline: 'none' }}
           onClick={slideLeft}
@@ -76,7 +78,7 @@ function Stories() {
           position="absolute"
           isRound
           zIndex={4}
-          size={['xsm']}
+          size={'xsm'}
           right={5}
           bg="gray.200"
           _focus={{ outline: 'none' }}
