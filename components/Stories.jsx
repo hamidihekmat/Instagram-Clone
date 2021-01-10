@@ -35,7 +35,7 @@ function Stories() {
   // View is the view width which the carousel will go to
   // 20 is length of stories we divide it by length of items in view
   const sliderRef = useRef(null);
-  const { slideLeft, slideRight, showPrev, showNext } = useSlider(sliderRef, 3);
+  const { next, previous, showPrev, showNext } = useSlider(sliderRef, 2);
 
   return (
     <Box
@@ -62,7 +62,7 @@ function Stories() {
           size={'xsm'}
           bg="gray.200"
           _focus={{ outline: 'none' }}
-          onClick={slideLeft}
+          onClick={previous}
           icon={<KeyboardArrowLeftIcon />}
         />
       )}
@@ -102,7 +102,7 @@ function Stories() {
           right={3}
           bg="gray.200"
           _focus={{ outline: 'none' }}
-          onClick={slideRight}
+          onClick={next}
           icon={<KeyboardArrowRightIcon />}
         />
       )}

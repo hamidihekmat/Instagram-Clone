@@ -38,17 +38,17 @@ export function useSlider(ref, view) {
     }
   }, [ref, setShowNext]);
 
-  const slideRight = () => {
+  const next = () => {
     const width = ref.current.offsetWidth / view;
     ref.current.scrollLeft += width;
     ref.current.scrollLeft += width;
   };
-  const slideLeft = () => {
+  const previous = () => {
     const width = ref.current.offsetWidth / view;
     ref.current.scrollLeft -= width;
     ref.current.scrollLeft -= width;
   };
-  return { slideLeft, slideRight, showPrev, showNext };
+  return { next, previous, showPrev, showNext };
 }
 
 // TODO
