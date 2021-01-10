@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Box, Stack, IconButton, useMediaQuery } from '@chakra-ui/react';
+import { Box, Stack, IconButton } from '@chakra-ui/react';
 // Components
 import Story from './Story';
 
@@ -11,29 +11,7 @@ import { useSlider } from '../hooks/useSlider';
 
 function Stories() {
   // Test Data (Need multiples of 5s)
-  const stories = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-  ];
-  // View is the view width which the carousel will go to
-  // 20 is length of stories we divide it by length of items in view
+  const stories = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   const sliderRef = useRef(null);
   const { next, previous, showPrev, showNext } = useSlider(sliderRef, 2);
 
@@ -56,6 +34,7 @@ function Stories() {
       {showPrev && (
         <IconButton
           position="absolute"
+          display={{ sm: 'none', md: 'block', lg: 'block', xl: 'block' }}
           isRound
           zIndex={4}
           left={3}
@@ -86,7 +65,6 @@ function Stories() {
         {stories.map((id) => (
           <Story
             key={id}
-            id={id}
             image="https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/medium/oapgW_Fp_400x400.jpg"
             name="Dan Abramov
 "
@@ -96,6 +74,7 @@ function Stories() {
       {showNext && (
         <IconButton
           position="absolute"
+          display={{ sm: 'none', md: 'block', lg: 'block', xl: 'block' }}
           isRound
           zIndex={4}
           size={'xsm'}
@@ -112,6 +91,5 @@ function Stories() {
 
 export default Stories;
 // TODO
-// ADD PREV/NEXT Buttons
-// Add functionalities
 // Loading State
+// Make Next/Prev Buttons their own component
