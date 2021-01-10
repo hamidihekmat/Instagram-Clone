@@ -15,16 +15,5 @@ export const theme = extendTheme({
       bg: '#FAFAFA',
     },
   },
-  components: {
-    Popover: {
-      variants: {
-        profile: {
-          popper: {
-            maxWidth: '170px',
-            width: '170px',
-          },
-        },
-      },
-    },
-  },
+  components: {},
 });
