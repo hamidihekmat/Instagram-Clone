@@ -36,7 +36,7 @@ function Stories() {
   // View is the view width which the carousel will go to
   // 20 is length of stories we divide it by length of items in view
   const sliderRef = useRef(null);
-  const { slideLeft, slideRight, showPrev } = useSlider(sliderRef, 2);
+  const { slideLeft, slideRight, showPrev, showNext } = useSlider(sliderRef, 2);
 
   return (
     <Box
@@ -70,7 +70,9 @@ function Stories() {
 
       <Stack
         overflowX="scroll"
+        mx="5px"
         direction="row"
+        h="100%"
         ref={sliderRef}
         css={{
           '&::-webkit-scrollbar ': {
@@ -91,18 +93,19 @@ function Stories() {
           />
         ))}
       </Stack>
-
-      <IconButton
-        position="absolute"
-        isRound
-        zIndex={4}
-        size={'xsm'}
-        right={3}
-        bg="gray.200"
-        _focus={{ outline: 'none' }}
-        onClick={slideRight}
-        icon={<KeyboardArrowRightIcon />}
-      />
+      {showNext && (
+        <IconButton
+          position="absolute"
+          isRound
+          zIndex={4}
+          size={'xsm'}
+          right={3}
+          bg="gray.200"
+          _focus={{ outline: 'none' }}
+          onClick={slideRight}
+          icon={<KeyboardArrowRightIcon />}
+        />
+      )}
     </Box>
   );
 }
