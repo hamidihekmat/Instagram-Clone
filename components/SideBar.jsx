@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import MiniProfile from './MiniProfile';
+import Suggestions from './Suggestions';
 
 function SideBar() {
   return (
@@ -11,6 +12,7 @@ function SideBar() {
       display={{ xl: 'block', lg: 'block', md: 'none', sm: 'none' }}
     >
       <MiniProfile />
+      <Suggestions />
     </Box>
   );
 }

@@ -16,9 +16,12 @@ import { useState } from 'react';
 function FavoriteMenu() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <Menu placement="bottom-end">
+    <Menu
+      placement="bottom-end"
+      onOpen={() => setIsOpen(true)}
+      onClose={() => setIsOpen(false)}
+    >
       <MenuButton
-        onClick={() => setIsOpen(!isOpen)}
         as={IconButton}
         _focus={{ outline: 'none' }}
         bg="white"

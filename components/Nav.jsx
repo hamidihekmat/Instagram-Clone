@@ -1,11 +1,15 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 // ChakraUI
 import { Box, Text, Spacer, IconButton, HStack } from '@chakra-ui/react';
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
-import SendIcon from '@material-ui/icons/Send';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import SendIcon from '../public/SVG/sendfull.svg';
+import SendOutlinedIcon from '../public/SVG/send.svg';
 import ExploreIcon from '@material-ui/icons/Explore';
-
+import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
 // Component
 import ProfileMenu from './ProfileMenu';
 import FavoriteMenu from './FavoriteMenu';
@@ -13,6 +17,9 @@ import FavoriteMenu from './FavoriteMenu';
 import { MainContainer } from '../utils/resusable';
 
 function Nav() {
+  const router = useRouter();
+  const path = router.pathname;
+  console.log(path);
   return (
     <Box
       w="100%"
@@ -43,7 +50,7 @@ function Nav() {
               isRound
               aria-label="Home"
               bg="white"
-              icon={<HomeIcon />}
+              icon={path === '/' ? <HomeIcon /> : <HomeOutlinedIcon />}
             />
           </Link>
           {/* Messages */}
@@ -53,7 +60,7 @@ function Nav() {
               isRound
               aria-label="Send Message"
               bg="white"
-              icon={<SendIcon />}
+              icon={path === '/messages' ? <SendIcon /> : <SendOutlinedIcon />}
             />
           </Link>
           {/* Explore */}
@@ -63,7 +70,9 @@ function Nav() {
               isRound
               aria-label="Explore More"
               bg="white"
-              icon={<ExploreIcon />}
+              icon={
+                path === '/explore' ? <ExploreIcon /> : <ExploreOutlinedIcon />
+              }
             />
           </Link>
           {/* Menus */}

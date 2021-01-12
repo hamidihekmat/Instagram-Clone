@@ -2,7 +2,13 @@ import { Stack, Text, Avatar, Spacer } from '@chakra-ui/react';
 
 function MiniProfile() {
   return (
-    <Stack direction="row" alignItems="center" mx="10px" height="116px">
+    <Stack
+      direction="row"
+      alignItems="center"
+      mx="10px"
+      mt="10px"
+      height="90px"
+    >
       <Avatar
         as={Avatar}
         cursor="pointer"
