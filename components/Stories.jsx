@@ -14,7 +14,7 @@ function Stories() {
   // Test Data
   const stories = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   const sliderRef = useRef(null);
-  const { next, previous, showPrev, showNext } = useSlider(sliderRef, 2);
+  const { next, previous, showPrev, showNext } = useSlider(sliderRef, 5);
 
   return (
     <Box

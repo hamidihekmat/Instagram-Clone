@@ -30,7 +30,7 @@ function MiniProfile() {
           fontWeight="bold"
           lineHeight="14px"
         >
-          homorsimpson
+          danabramov
         </Text>
         <Text
           color="#8e8e8e"
@@ -38,7 +38,7 @@ function MiniProfile() {
           fontSize="14px"
           textAlign="start"
         >
-          Homer Simpson
+          Dan Abramov
         </Text>
       </Stack>
       <Spacer />

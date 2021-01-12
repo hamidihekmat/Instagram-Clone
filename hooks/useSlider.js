@@ -4,14 +4,15 @@ import { useState, useEffect } from 'react';
 export function useSlider(ref, view = 1) {
   const [showPrev, setShowPrev] = useState(false);
   const [showNext, setShowNext] = useState(true);
+  const [size, setSize] = useState(0);
   // Size in which we can use to render dotted statte
   // const size = Math.ceil(ref.current.scrollWidth / ref.current.clientWidth);
-  // console.log(size);
 
   const trackScroll = (event) => {
     const { scrollLeft, clientWidth, scrollWidth } = event.target;
-    // Max scroll width
     const maxWidth = scrollLeft + clientWidth;
+    const width = clientWidth / view;
+    setSize(Math.ceil(scrollWidth / width / 2));
 
     if (scrollLeft != 0) {
       setShowPrev(true);
@@ -48,7 +49,7 @@ export function useSlider(ref, view = 1) {
     ref.current.scrollLeft -= width;
     ref.current.scrollLeft -= width;
   };
-  return { next, previous, showPrev, showNext };
+  return { next, previous, showPrev, showNext, size };
 }
 
 // TODO
