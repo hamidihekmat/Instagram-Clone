@@ -63,8 +63,7 @@ function Stories() {
           <Story
             key={id}
             src="https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/medium/oapgW_Fp_400x400.jpg"
-            userName="danabramov
-"
+            userName="danabramov"
           />
         ))}
       </Stack>
