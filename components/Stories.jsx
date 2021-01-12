@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Box, Stack, IconButton } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
 // Components
 import Story from './Story';
 import SliderButton from './SliderButton';
@@ -27,6 +27,8 @@ function Stories() {
       justifyContent="flex-start"
       alignItems="center"
       position="relative"
+      mx={{ lg: '0', xl: '0', md: 'auto', sm: 'auto' }}
+      bg="white"
       w={{
         md: '100%',
         sm: '100%',

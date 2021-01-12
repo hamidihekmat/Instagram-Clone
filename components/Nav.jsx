@@ -14,7 +14,13 @@ import { MainContainer } from '../utils/resusable';
 
 function Nav() {
   return (
-    <Box w="100%" borderBottom="1px" borderColor="gray.200" zIndex={99}>
+    <Box
+      w="100%"
+      bg="primary.bg"
+      borderBottom="1px"
+      borderColor="gray.200"
+      zIndex={99}
+    >
       <MainContainer
         alignItems="center"
         display="flex"
