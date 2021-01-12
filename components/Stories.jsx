@@ -11,7 +11,7 @@ import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
 import { useSlider } from '../hooks/useSlider';
 
 function Stories() {
-  // Test Data (Need multiples of 5s)
+  // Test Data
   const stories = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   const sliderRef = useRef(null);
   const { next, previous, showPrev, showNext } = useSlider(sliderRef, 2);
@@ -62,8 +62,8 @@ function Stories() {
         {stories.map((id) => (
           <Story
             key={id}
-            image="https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/medium/oapgW_Fp_400x400.jpg"
-            name="Dan Abramov
+            src="https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/medium/oapgW_Fp_400x400.jpg"
+            userName="danabramov
 "
           />
         ))}

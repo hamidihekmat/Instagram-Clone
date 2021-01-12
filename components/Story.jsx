@@ -2,7 +2,7 @@ import { Avatar, Box, Text } from '@chakra-ui/react';
 
 // ID is used for tabindex
 
-function Story({ name, image }) {
+function Story({ userName, src }) {
   return (
     <Box maxWidth="62px" mx="5px">
       <Avatar
@@ -14,10 +14,10 @@ function Story({ name, image }) {
         css={{
           border: '1px solid pink',
         }}
-        src={image}
+        src={src}
       />
       <Text fontSize="11px" isTruncated>
-        {name}
+        {userName}
       </Text>
     </Box>
   );
