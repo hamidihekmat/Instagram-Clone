@@ -38,7 +38,7 @@ function MiniProfile() {
           fontSize="14px"
           textAlign="start"
         >
-          Homor Simpson
+          Homer Simpson
         </Text>
       </Stack>
       <Spacer />

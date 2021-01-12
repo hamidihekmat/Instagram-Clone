@@ -19,7 +19,6 @@ import { MainContainer } from '../utils/resusable';
 function Nav() {
   const router = useRouter();
   const path = router.pathname;
-  console.log(path);
   return (
     <Box
       w="100%"
