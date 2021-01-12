@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { Box, Stack, IconButton } from '@chakra-ui/react';
 // Components
 import Story from './Story';
+import SliderButton from './SliderButton';
 
 // Icons
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
@@ -32,15 +33,9 @@ function Stories() {
       }}
     >
       {showPrev && (
-        <IconButton
-          position="absolute"
-          display={{ sm: 'none', md: 'block', lg: 'block', xl: 'block' }}
-          isRound
+        <SliderButton
           zIndex={4}
           left={3}
-          size={'xsm'}
-          bg="gray.200"
-          _focus={{ outline: 'none' }}
           onClick={previous}
           icon={<KeyboardArrowLeftIcon />}
         />
@@ -72,15 +67,9 @@ function Stories() {
         ))}
       </Stack>
       {showNext && (
-        <IconButton
-          position="absolute"
-          display={{ sm: 'none', md: 'block', lg: 'block', xl: 'block' }}
-          isRound
+        <SliderButton
           zIndex={4}
-          size={'xsm'}
           right={3}
-          bg="gray.200"
-          _focus={{ outline: 'none' }}
           onClick={next}
           icon={<KeyboardArrowRightIcon />}
         />

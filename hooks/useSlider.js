@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 // view is the width of the container which will the carousel slide to on (Next|Prev)
-export function useSlider(ref, view) {
+export function useSlider(ref, view = 1) {
   const [showPrev, setShowPrev] = useState(false);
   const [showNext, setShowNext] = useState(true);
   // Size in which we can use to render dotted statte
