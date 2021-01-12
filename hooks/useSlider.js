@@ -5,8 +5,6 @@ export function useSlider(ref, view = 1) {
   const [showPrev, setShowPrev] = useState(false);
   const [showNext, setShowNext] = useState(true);
   const [size, setSize] = useState(0);
-  // Size in which we can use to render dotted statte
-  // const size = Math.ceil(ref.current.scrollWidth / ref.current.clientWidth);
 
   const trackScroll = (event) => {
     const { scrollLeft, clientWidth, scrollWidth } = event.target;
