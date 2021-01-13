@@ -9,7 +9,13 @@ function SideBar() {
       top="0"
       position="absolute"
       w="293px"
-      display={{ xl: 'block', lg: 'block', md: 'none', sm: 'none' }}
+      display={{
+        xl: 'block',
+        lg: 'block',
+        md: 'none',
+        sm: 'none',
+        base: 'none',
+      }}
     >
       <MiniProfile />
       <Suggestions />
