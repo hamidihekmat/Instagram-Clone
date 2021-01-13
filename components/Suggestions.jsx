@@ -1,6 +1,8 @@
 import { Box, Text, Stack, Spacer } from '@chakra-ui/react';
+import Suggested from './Suggested';
 
 function Suggestions() {
+  const suggested = [0, 1, 2, 3, 4];
   return (
     <Box>
       <Stack mx="10px" direction="row">
@@ -13,6 +15,9 @@ function Suggestions() {
         </Text>
       </Stack>
       {/* Suggestions */}
+      {suggested.map((id) => (
+        <Suggested key={id} />
+      ))}
     </Box>
   );
 }

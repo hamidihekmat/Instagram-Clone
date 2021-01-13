@@ -10,7 +10,6 @@ function MiniProfile() {
       height="90px"
     >
       <Avatar
-        as={Avatar}
         cursor="pointer"
         size="lg"
         name="Alex Jones"
