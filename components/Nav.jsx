@@ -26,6 +26,7 @@ function Nav() {
       borderBottom="1px"
       borderColor="gray.200"
       zIndex={99}
+      position="fixed"
     >
       <MainContainer
         alignItems="center"

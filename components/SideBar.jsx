@@ -6,7 +6,7 @@ function SideBar() {
   return (
     <Box
       right="0"
-      top="0"
+      top="18px"
       position="absolute"
       w="293px"
       display={{
