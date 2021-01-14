@@ -79,4 +79,7 @@ function MoreAlert() {
   );
 }
 
+// TODO
+// Accept custom props
+
 export default MoreAlert;
