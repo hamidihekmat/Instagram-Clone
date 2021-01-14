@@ -10,7 +10,7 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 function Post() {
   return (
-    <Box w="100%">
+    <Box w="100%" bg="white">
       <Box borderBottom="1px" borderColor="gray.200">
         <HStack mx="1rem" h="60px" alignItems="center">
           <Avatar
