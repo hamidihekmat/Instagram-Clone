@@ -7,6 +7,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import MoreAlert from './MoreAlert';
 
 function Post() {
   return (
@@ -20,14 +21,7 @@ function Post() {
             src="https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/medium/oapgW_Fp_400x400.jpg"
           />
           <Spacer />
-          <IconButton
-            isRound
-            aria-label="Show more"
-            bg="white"
-            _hover={{ background: 'white' }}
-            _focus={{ outline: 'none' }}
-            icon={<MoreHorizIcon />}
-          />
+          <MoreAlert />
         </HStack>
       </Box>
       {/* Images */}
@@ -36,6 +30,7 @@ function Post() {
         backgroundPosition="center"
         src="https://picsum.photos/id/225/600/600"
       />
+      {/* Modal */}
     </Box>
   );
 }
